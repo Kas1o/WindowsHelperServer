@@ -106,6 +106,9 @@ namespace MessageServer
                                 SystemVolume.SetMasterVolume(target_volume);
                             }
                             break;
+                        default:
+                            Console.WriteLine($"Unknown Command: <{item.Key}:{item.Value}>");
+                            break;
                     }
                 }
             }
