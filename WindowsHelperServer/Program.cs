@@ -29,7 +29,7 @@ namespace MessageServer
             while (true)
             {
                 HttpListenerContext context = await listener.GetContextAsync();
-                HandleRequest(context).ConfigureAwait(false);
+                await HandleRequest(context).ConfigureAwait(false);
             }
         }
         static async Task HandleRequest(HttpListenerContext context)
